@@ -1,0 +1,99 @@
+
+tbody tr:first-child {
+	border-top: 2px solid black;
+}
+tbody tr:last-child	{
+	border-bottom: 2px solid black;
+}
+
+tr:nth-child(even) td:nth-child(even) {
+	background-color: hsla(1,60%,99%,1);
+}
+tr:nth-child(even) td:nth-child(odd) {
+	background-color: hsla(1,60%,95%,1);
+}
+tr:nth-child(even) th {
+	background-color: hsla(1,60%,97%,1);
+}
+tr:nth-child(even) td.podświetl {
+	background-color: hsla(10,95%,95%,1);
+}
+
+tr:nth-child(odd) td:nth-child(even) {
+	background-color: hsla(1,60%,90%,1);
+}
+tr:nth-child(odd) td:nth-child(odd) {
+	background-color: hsla(1,60%,85%,1);
+}
+tr:nth-child(odd) th {
+	background-color: hsla(10,60%,87%,1);
+}
+tr:nth-child(odd) td.podświetl {
+	background-color: hsla(45,95%,85%,1);
+}
+
+tr:hover td:nth-child(even) {
+	background-color: hsla(50,70%,90%,1);
+}
+tr:hover td:nth-child(odd) {
+	background-color: hsla(50,70%,85%,1);
+}
+tr:hover th {
+	background-color: hsla(50,70%,87%,1);
+}
+tr:hover td:hover {
+	background-color: hsla(0,90%,80%,1);
+}
+
+tfoot tr:nth-child(even) td:nth-child(even) {
+	background-color: hsla(700,60%,99%,1);
+}
+tfoot tr:nth-child(even) td:nth-child(odd) {
+	background-color: hsla(700,60%,95%,1);
+}
+tfoot tr:nth-child(even) th {
+	background-color: hsla(700,60%,97%,1);
+}
+
+tfoot tr:nth-child(odd) td:nth-child(even) {
+	background-color: hsla(700,60%,90%,1);
+}
+tfoot tr:nth-child(odd) td:nth-child(odd) {
+	background-color: hsla(700,60%,85%,1);
+}
+tfoot tr:nth-child(odd) th {
+	background-color: hsla(700,60%,87%,1);
+}
+
+thead tr:nth-child(even) td:nth-child(even) {
+	background-color: hsla(1,60%,99%,1);
+}
+thead tr:nth-child(even) td:nth-child(odd) {
+	background-color: hsla(1,60%,95%,1);
+}
+thead tr:nth-child(even) th {
+	background-color: hsla(1,60%,97%,1);
+}
+
+thead tr:nth-child(odd) td:nth-child(even) {
+	background-color: hsla(1,60%,90%,1);
+}
+thead tr:nth-child(odd) td:nth-child(odd) {
+	background-color: hsla(1,60%,85%,1);
+}
+thead tr:nth-child(odd) th {
+	background-color: hsla(10,60%,87%,1);
+}
+
+thead tr th[onclick]:hover {
+	background-color: hsla(5,95%,80%,1);
+}
+thead tr th[onclick]:active {
+	background-color: hsla(0,95%,80%,1);
+}
+thead tr td[onclick]:hover {
+	background-color: hsla(5,90%,80%,1);
+}
+thead tr td[onclick]:active {
+	background-color: hsla(0,90%,80%,1);
+}

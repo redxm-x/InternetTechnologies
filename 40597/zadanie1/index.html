@@ -1,0 +1,91 @@
+<!doctype html>
+<html>
+<head>
+	<script src="main.js"></script>
+	<link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+<table id="tab" >
+<thead>
+
+	<tr>
+		<th> NAZWA </th>
+		<th> WOJEWÓDZTWO </th>
+		<th> POPULACJA </th>
+		<th> POWIERZCHNIA </th>
+		<th> GĘSTOŚĆ </th>
+	</tr>
+	<tr>
+		<th onclick="genTab(alfabetycznieNa('nazwa'))"> alfabetycznie </th>
+		<th onclick="genTab(alfabetycznieNa('wojewodztwo'))">alfabetycznie </th>
+		<th onclick="genTab(rosnPo('populacja'))"> rosnąco </th>
+		<th onclick="genTab(rosnPo('powierzchnia'))"> rosnąco </th>
+		<th onclick="genTab(city.rosGest)"> rosnąco </th>
+	</tr>
+	<tr>
+		<th>
+			<input type="text" id="nazwa" onkeyup="nazwaHandler()" placeholder="Szukaj po nazwie" >
+		</th>
+		<th>
+			<input type="text" id="wojew" onkeyup="wojewHandler()" placeholder="Szukaj po wojewodztwie" >
+		</th>
+		<th onclick="genTab(malPo('populacja'))" > malejąco </th>
+		<th onclick="genTab(malPo('powierzchnia'))" > malejąco </th>
+		<th onclick="genTab(city.malGest)" > malejąco </th>
+	</tr>
+	<tr>
+		<th></th>
+		<th>
+			<select
+				id="selID"
+				onchange="selectHandler()"
+			>
+				<option value="">Wszystko</option>
+				<option value="pomorskie">pomorskie</option>
+				<option value="mazowieckie">mazowieckie</option>
+				<option value="dolnośląskie">dolnośląskie</option>
+				<option value="małopolskie">małopolskie</option>
+
+			</select>
+		</th>
+		<th></th>
+		<th >  </th>
+		<th></th>
+	</tr>
+
+</thead>
+<tbody id = "tableBody">
+
+</tbody>
+<tfoot id = "tfoot">
+	<tr><th>Średnia (ogółem)</th>
+		<td></td>
+		<td id = "pop">
+		</td>
+		<td id = "pow"></td>
+		<td id = "ges"></td>
+	</tr>
+	<tr><th>Średnia (filtr)</th>
+		<td></td>
+		<td id = "test">
+		</td>
+		<td id = "poww"></td>
+		<td id = "gee"></td>
+	</tr>
+</tfoot>
+</table>
+<script>
+	genTab(city.rosGest)
+	popHandler('pop')
+	powHandler('pow')
+	gesHandler('ges')
+	filtrValues('test', LISTA)
+	powfiltr('poww')
+	gesfiltr('gee')
+
+</script>
+
+
+</body>
+</html>
